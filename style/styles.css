@@ -1,0 +1,140 @@
+:root{
+    /* device */
+    --mobile: 375px;
+    --desktop: 1440px;
+    /* colors */
+    --orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --back-head-btn: hsl(0, 0%, 95%);
+    /* font */
+    --font-size: 15px;
+    --first-font: 'Lexend Deca';
+    --second-font: 'Big Shoulders Display';
+    --first-weight: 400;
+    --second-weight: 700;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--back-head-btn);
+    font-size: var(--font-size);
+    font-family: var(--first-font);
+    font-weight: var(--first-weight);
+    color: var(--paragraphs);
+    line-height: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    direction: row;
+    justify-content: center;
+}
+
+.card{
+    height: 325px;
+    width: 175px;
+    text-align: left;
+    padding: 50px;
+}
+.card h2{
+    text-transform: uppercase;
+    font-family: var(--second-font);
+    font-weight: var(--second-weight);
+    margin-bottom: 30px;
+}
+.card p{
+    margin-bottom: 60px;
+}
+.sedans{
+    background-color: var(--orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.sedans button{
+    color: var(--orange);
+}
+.sedans button:hover{
+    color: var(--back-head-btn);
+    background-color: inherit;
+    cursor: pointer;
+}
+.suvs{
+    background-color: var(--dark-cyan);
+}
+.suvs button{
+    color: var(--dark-cyan);
+}
+.suvs button:hover{
+    color: var(--back-head-btn);
+    background-color: inherit;
+    cursor: pointer;
+}
+.luxury{
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.luxury button{
+    color: var(--very-dark-cyan);
+}
+.luxury button:hover{
+    color: var(--back-head-btn);
+    background-color: inherit;
+    cursor: pointer;
+}
+button{
+    border-style: none;
+    border: solid 2px var(--back-head-btn);
+    background-color: var(--back-head-btn);
+    font-family: var(--first-font);
+    border-radius: 20px;
+    width: 60%;
+    padding: 10px;
+}
+
+@media screen and (max-width:400px){
+    body{
+        height: 100%;
+        max-width: 375px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    main{
+        flex-direction: column;
+        margin: 50px 0;
+    }
+    .card{
+        border-radius: 0;
+    }
+    .sedans{
+        border-radius: 10px 10px 0 0;
+    }
+    .luxury{
+        border-radius: 0 0 10px 10px;
+    }
+
+    .attribution{
+        top: 15px;
+    }
+}
+
+.attribution{
+    font-size: 12px; 
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    color: var(--orange)
+}
+.attribution a{
+    text-decoration: none;
+    color: var(--dark-cyan);
+}
+.attribution a:hover{
+    color: var(--very-dark-cyan);
+}
